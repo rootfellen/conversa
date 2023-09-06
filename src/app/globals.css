@@ -8,8 +8,10 @@ body,
   height: 100%;
 }
 
-body {
-  background: linear-gradient(rgb(8 47 73), rgb(17, 24, 39), rgb(0, 0, 0));
+@layer base {
+  container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
 }
 
 .scrollbar-w-2::-webkit-scrollbar {

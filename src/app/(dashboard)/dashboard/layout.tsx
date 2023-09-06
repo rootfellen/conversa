@@ -1,19 +1,21 @@
+import { Icon, Icons } from "@/components/Icons";
+
 import { authOptions } from "@/lib/auth";
 import { getServerSession } from "next-auth";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ReactNode } from "react";
+import { FC, ReactNode } from "react";
 
 import { fetchRedis } from "@/helpers/redis";
 import { getFriendsByUserId } from "@/helpers/get-friends-by-user-id";
 
 import { SidebarOption } from "@/types/typings";
-import SignOutButton from "@/components/sign-out-button";
-import { Icons } from "@/components/Icons";
-import FriendRequestSidebarOptions from "@/components/friend-request-sidebar-options";
-import SidebarChatList from "@/components/sidebar-chatlist";
 import MobileChatLayout from "@/components/mobile-chat-layout";
+import SidebarChatList from "@/components/sidebar-chatlist";
+import FriendRequestSidebarOptions from "@/components/friend-request-sidebar-options";
+import SignOutButton from "@/components/sign-out-button";
+
 interface LayoutProps {
   children: ReactNode;
 }
