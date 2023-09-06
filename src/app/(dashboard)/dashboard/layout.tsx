@@ -1,5 +1,3 @@
-import { Icon, Icons } from "@/components/Icons";
-
 import { authOptions } from "@/lib/auth";
 import { getServerSession } from "next-auth";
 import Image from "next/image";
@@ -15,6 +13,7 @@ import MobileChatLayout from "@/components/mobile-chat-layout";
 import SidebarChatList from "@/components/sidebar-chatlist";
 import FriendRequestSidebarOptions from "@/components/friend-request-sidebar-options";
 import SignOutButton from "@/components/sign-out-button";
+import { Icons } from "@/components/Icons";
 
 interface LayoutProps {
   children: ReactNode;
