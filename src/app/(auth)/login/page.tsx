@@ -93,6 +93,17 @@ const LoginPage: React.FC<LoginPageProps> = () => {
           </Button>
         </div>
       </div>
+      <footer className="absolute bottom-16">
+        made by{" "}
+        <Link
+          className="hover:text-red-400 transition-colors duration-300 ease-in-out"
+          href="https://github.com/rootfellen"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          serhii t.
+        </Link>
+      </footer>
     </div>
   );
 };
