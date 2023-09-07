@@ -8,16 +8,12 @@ import { FC, ReactNode } from "react";
 import { fetchRedis } from "@/helpers/redis";
 import { getFriendsByUserId } from "@/helpers/get-friends-by-user-id";
 
-import { SidebarOption } from "@/types/typings";
-import MobileChatLayout from "@/components/mobile-chat-layout";
 import SidebarChatList from "@/components/sidebar-chatlist";
 import FriendRequestSidebarOptions from "@/components/friend-request-sidebar-options";
 import SignOutButton from "@/components/sign-out-button";
-import { Icons } from "@/components/Icons";
-
-interface LayoutProps {
-  children: ReactNode;
-}
+import MobileChatLayout from "@/components/mobile-chat-layout";
+import Logo from "@/components/ui/logo";
+import { PlusIcon } from "lucide-react";
 
 // Done after the video and optional: add page metadata
 export const metadata = {
@@ -30,16 +26,20 @@ const sidebarOptions: SidebarOption[] = [
     id: 1,
     name: "Add friend",
     href: "/dashboard/add",
-    Icon: "UserPlus",
   },
 ];
 
-const Layout = async ({ children }: LayoutProps) => {
+const Layout = async ({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: { chatId: string };
+}) => {
   const session = await getServerSession(authOptions);
   if (!session) notFound();
 
   const friends = await getFriendsByUserId(session.user.id);
-  console.log("friends", friends);
 
   const unseenRequestCount = (
     (await fetchRedis(
@@ -60,10 +60,9 @@ const Layout = async ({ children }: LayoutProps) => {
       </div>
 
       <div className="hidden md:flex h-full w-full max-w-xs grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6">
-        <Link href="/dashboard" className="flex h-16 shrink-0 items-center">
-          <Icons.Logo className="h-8 w-auto text-indigo-600" />
-        </Link>
-
+        <div className="flex h-16 shrink-0 items-center">
+          <Logo />
+        </div>
         {friends.length > 0 ? (
           <div className="text-xs font-semibold leading-6 text-gray-400">
             Your chats
@@ -82,7 +81,6 @@ const Layout = async ({ children }: LayoutProps) => {
 
               <ul role="list" className="-mx-2 mt-2 space-y-1">
                 {sidebarOptions.map((option) => {
-                  const Icon = Icons[option.Icon];
                   return (
                     <li key={option.id}>
                       <Link
@@ -90,7 +88,8 @@ const Layout = async ({ children }: LayoutProps) => {
                         className="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex gap-3 rounded-md p-2 text-sm leading-6 font-semibold"
                       >
                         <span className="text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white">
-                          <Icon className="h-4 w-4" />
+                          {" "}
+                          <PlusIcon />
                         </span>
 
                         <span className="truncate">{option.name}</span>

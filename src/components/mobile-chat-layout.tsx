@@ -1,19 +1,19 @@
 "use client";
 
 import { Transition, Dialog } from "@headlessui/react";
-import { Menu, X } from "lucide-react";
+import { Menu, PlusIcon, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { FC, Fragment, useEffect, useState } from "react";
 
 import { Session } from "next-auth";
-import { SidebarOption } from "@/types/typings";
+
 import { usePathname } from "next/navigation";
 import Button, { buttonVariants } from "./ui/button";
 import SidebarChatList from "./sidebar-chatlist";
 import FriendRequestSidebarOptions from "./friend-request-sidebar-options";
 import SignOutButton from "./sign-out-button";
-import { Icons } from "./Icons";
+import Logo from "./ui/logo";
 
 interface MobileChatLayoutProps {
   friends: User[];
@@ -39,14 +39,9 @@ const MobileChatLayout: FC<MobileChatLayoutProps> = ({
   return (
     <div className="fixed bg-zinc-50 border-b border-zinc-200 top-0 inset-x-0 py-2 px-4">
       <div className="w-full flex justify-between items-center">
-        <Link
-          href="/dashboard"
-          className={buttonVariants({ variant: "ghost" })}
-        >
-          <Icons.Logo className="h-6 w-auto text-indigo-600" />
-        </Link>
-        <Button onClick={() => setOpen(true)} className="gap-4">
-          Menu <Menu className="h-6 w-6" />
+        <Logo />
+        <Button onClick={() => setOpen(true)} className="gap-4" size="sm">
+          <Menu className="h-6 w-6" />
         </Button>
       </div>
       <Transition.Root show={open} as={Fragment}>
@@ -111,7 +106,6 @@ const MobileChatLayout: FC<MobileChatLayoutProps> = ({
                               </div>
                               <ul role="list" className="-mx-2 mt-2 space-y-1">
                                 {sidebarOptions.map((option) => {
-                                  const Icon = Icons[option.Icon];
                                   return (
                                     <li key={option.name}>
                                       <Link
@@ -119,7 +113,8 @@ const MobileChatLayout: FC<MobileChatLayoutProps> = ({
                                         className="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                                       >
                                         <span className="text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white">
-                                          <Icon className="h-4 w-4" />
+                                          {" "}
+                                          <PlusIcon />
                                         </span>
                                         <span className="truncate">
                                           {option.name}
