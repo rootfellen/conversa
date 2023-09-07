@@ -1,7 +1,14 @@
 # Conversa
 
-Real-time online chat platform for secured conversations.
-<img src="/public/conversa.png" width="128"/>
+
+
+<p align="center">
+  <a href="https://conversa-chat.vercel.app/">
+  <img src="/public/conversa.png" width="256"/>
+  </a>
+  <p align="center">Real-time online chat platform for secured conversations.</p>
+</p>
+
 
 ## Features
 
