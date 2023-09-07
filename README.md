@@ -1,22 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Conversa
 
-## Getting Started
+Real-time online chat platform for secured conversations.
+<img src="/logo.svg" width="128"/>
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- Realtime messaging
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Adding friends / sending friend requests via email
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Incredibly fast database queries with Redis
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Responsive UI
+
+- Protected Routes
+
+- Next Auth / Google Auth
+
+## Usage
+
+Log in with your email, add a friend, who already registered, and start chatting.
+you can add me: hireserhiitarasenko@gmail.com
+
+## Tech stack
+
+Front-end:
+
+- Next.js
+- Typescript
+- TailwindCSS
+- Headless UI
+- Zod
+- Lucide React
 
 Back-end:
 
