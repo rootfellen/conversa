@@ -14,7 +14,8 @@ export const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-emerald-500 text-white hover:bg-slate-600",
+        default:
+          "bg-[#5d1dff] text-white hover:bg-[#2f0975] transition duration-300 ease-in-out",
         ghost: "bg-transparent hover:text-slate-900 hover:bg-slate-200",
       },
       size: {

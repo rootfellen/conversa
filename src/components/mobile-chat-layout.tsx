@@ -70,7 +70,7 @@ const MobileChatLayout: FC<MobileChatLayoutProps> = ({
                           <div className="ml-3 flex h-7 items-center">
                             <button
                               type="button"
-                              className="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                              className="rounded-md bg-white text-gray-400 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                               onClick={() => setOpen(false)}
                             >
                               <span className="sr-only">Close panel</span>
@@ -83,7 +83,7 @@ const MobileChatLayout: FC<MobileChatLayoutProps> = ({
                         {/* Content */}
 
                         {friends.length > 0 ? (
-                          <div className="text-xs font-semibold leading-6 text-gray-400">
+                          <div className="text-md font-semibold leading-6 text-gray-900">
                             Your chats
                           </div>
                         ) : null}
@@ -93,13 +93,13 @@ const MobileChatLayout: FC<MobileChatLayoutProps> = ({
                             role="list"
                             className="flex flex-1 flex-col gap-y-7"
                           >
-                            <li>
+                            <li className="my-4">
                               <SidebarChatList
                                 friends={friends}
                                 sessionId={session.user.id}
                               />
                             </li>
-
+                            <hr />
                             <li>
                               <div className="text-md font-semibold leading-6 text-gray-900">
                                 Overview
@@ -110,9 +110,9 @@ const MobileChatLayout: FC<MobileChatLayoutProps> = ({
                                     <li key={option.name}>
                                       <Link
                                         href={option.href}
-                                        className="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                                        className="hover:text-[#2a6355] hover:bg-[#9fe4d3c2] transition duration-300 ease-in-out group flex gap-x-3 rounded-md p-4 text-sm leading-6 font-semibold"
                                       >
-                                        <span className="text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white">
+                                        <span className="border-gray-200 group-hover:border-[#9fe4d3] group-hover:text-[#2a6355] transition duration-300 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white">
                                           {" "}
                                           <PlusIcon />
                                         </span>

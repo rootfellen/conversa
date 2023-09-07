@@ -16,20 +16,21 @@ const loading: FC<loadingProps> = ({}) => {
                 <div className="grid grid-cols-12 gap-y-2">
                   <div className="col-start-6 col-end-13 p-3 rounded-lg">
                     <div className="flex items-center justify-start flex-row-reverse">
-                      <div className="relative h-10 w-10">
-                        <Skeleton width={40} height={40} borderRadius={999} />
-                      </div>
-                      <div className="relative mr-3 text-sm bg-indigo-100 text-black py-2 px-4 border border-gray-100 rounded-xl">
+                      <Skeleton width={40} height={40} borderRadius={999} />
+
+                      <div className="relative mr-3 w-[35%] text-sm bg-indigo-100 text-black py-2 px-4 border border-gray-100 rounded-xl">
                         <Skeleton className="ml-2" width={150} height={20} />
                       </div>
                     </div>
                   </div>
                   <div className="col-start-6 col-end-13 p-3 rounded-lg">
                     <div className="flex items-center justify-start flex-row-reverse">
-                      <div className="relative h-10 w-10">
-                        <Skeleton width={40} height={40} borderRadius={999} />
-                      </div>
-                      <div className="relative mr-3 text-sm bg-indigo-100 text-black py-2 px-4 border border-gray-100 rounded-xl">
+                      <Skeleton
+                        className="w-[100%]"
+                        height={40}
+                        borderRadius={999}
+                      />
+                      <div className="relative mr-3 w-[50%] text-sm bg-indigo-100 text-black py-2 px-4 border border-gray-100 rounded-xl">
                         <Skeleton className="ml-2" width={150} height={20} />
                       </div>
                     </div>
@@ -41,17 +42,21 @@ const loading: FC<loadingProps> = ({}) => {
                       <div className="relative h-10 w-10">
                         <Skeleton width={40} height={40} borderRadius={999} />
                       </div>
-                      <div className="relative ml-3 text-sm bg-white py-2 px-4 border border-gray-100 rounded-xl">
+                      <div className="relative ml-3 w-[50%] text-sm bg-[#ffebdb] py-2 px-4 border border-gray-100 rounded-xl">
                         <Skeleton className="ml-2" width={150} height={20} />
                       </div>
                     </div>
                   </div>
                   <div className="col-start-6 col-end-13 p-3 rounded-lg">
                     <div className="flex items-center justify-start flex-row-reverse">
-                      <div className="relative h-10 w-10">
-                        <Skeleton width={40} height={40} borderRadius={999} />
+                      <div className="relative h-10">
+                        <Skeleton
+                          className="w-[100%]"
+                          height={40}
+                          borderRadius={999}
+                        />
                       </div>
-                      <div className="relative mr-3 text-sm bg-indigo-100 text-black py-2 px-4 border border-gray-100 rounded-xl">
+                      <div className="relative mr-3 w-full text-sm bg-indigo-100 text-black py-2 px-4 border border-gray-100 rounded-xl">
                         <Skeleton className="ml-2" width={150} height={20} />
                       </div>
                     </div>
@@ -61,7 +66,7 @@ const loading: FC<loadingProps> = ({}) => {
                       <div className="relative h-10 w-10">
                         <Skeleton width={40} height={40} borderRadius={999} />
                       </div>
-                      <div className="relative ml-3 text-sm bg-white py-2 px-4 border border-gray-100 rounded-xl">
+                      <div className="relative ml-3 w-full text-sm bg-[#ffebdb] py-2 px-4 border border-gray-100 rounded-xl">
                         <Skeleton className="ml-2" width={150} height={20} />
                       </div>
                     </div>
