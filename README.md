@@ -1,5 +1,7 @@
 # Conversa
 
+
+
 Real-time online chat platform for secured conversations.
 
 ## Features
@@ -24,8 +26,9 @@ you can add me: hireserhiitarasenko@gmail.com
 
 ## Tech stack
 
-```python
+
 Front-end:
+
 - Next.js
 - Typescript
 - TailwindCSS
@@ -33,18 +36,13 @@ Front-end:
 - Zod
 - Lucide React
 
-# returns 'words'
-foobar.pluralize('word')
 
-# returns 'geese'
-foobar.pluralize('goose')
+Back-end:
 
-# returns 'phenomenon'
-foobar.singularize('phenomena')
-```
-
-```python
-Back-end
+- Axios
+- Redis
+- WebSockets
+- Next Auth
 
 ## Contributing
 
