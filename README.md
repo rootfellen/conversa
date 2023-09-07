@@ -1,7 +1,8 @@
 # Conversa
 
 Real-time online chat platform for secured conversations.
-<img src="/logo.svg" width="128"/>
+
+<div><img src="public/logo.svg" width="128"/> <span>conversa.</span></div>
 
 ## Features
 
