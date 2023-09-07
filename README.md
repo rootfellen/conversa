@@ -22,7 +22,7 @@
 
 - Protected Routes
 
-- Next Auth / Google Auth
+- Google Auth
 
 ## Usage
 
