@@ -101,7 +101,7 @@ const MobileChatLayout: FC<MobileChatLayoutProps> = ({
                             </li>
 
                             <li>
-                              <div className="text-xs font-semibold leading-6 text-gray-400">
+                              <div className="text-md font-semibold leading-6 text-gray-900">
                                 Overview
                               </div>
                               <ul role="list" className="-mx-2 mt-2 space-y-1">
